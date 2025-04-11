@@ -20,7 +20,7 @@ export default function BodyParts() {
             numColumns={2}
             keyExtractor={item => item.name}
             showsVerticalScrollIndicator={false}
-            contentContainerStyle={{paddingBottom: 50, paddingTop: 20}}
+            contentContainerStyle={{paddingBottom: hp(10), paddingTop: hp(2)}}
             columnWrapperStyle={{
                 justifyContent: 'space-between'
             }}
