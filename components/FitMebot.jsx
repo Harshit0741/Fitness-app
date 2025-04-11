@@ -21,7 +21,7 @@ export default function FitMeBot() {
         }}
       >
         <WebView 
-          source={require('../constants/chat.html')} // Ensure chat.html is in the correct path
+          source={require('../assets/chat.html')} // Ensure chat.html is in the correct path
           javaScriptEnabled
           domStorageEnabled
           style={{ flex: 1, backgroundColor: 'transparent' }}  

@@ -49,22 +49,24 @@ export default function Home() {
         <BodyParts />
       </View>
 
-      {/* Floating Chatbot Button */}
+  {/* Chatbot Panel */}
+  {isChatVisible && (
+        <View className="absolute bottom-24 right-6 h-[90%] w-[80%] rounded-2xl shadow-lg z-40 overflow-hidden">
+          <FitMeBot />
+        </View>
+      )}
+
+      {/* Floating Chat Button */}
       <TouchableOpacity
         className="absolute bottom-6 right-6 z-50 bg-rose-500 p-4 rounded-full shadow-lg"
         onPress={() => setIsChatVisible(!isChatVisible)}
       >
-        <Ionicons name={isChatVisible ? "close" : "chatbubble-ellipses"} size={30} color="white" />
+        <Ionicons
+          name={isChatVisible ? "close" : "chatbubble-ellipses"}
+          size={30}
+          color="white"
+        />
       </TouchableOpacity>
-
-      {/* Chatbot Container */}
-      {isChatVisible && (
-        <View className="absolute bottom-16 right-6  rounded-xl shadow-lg overflow-hidden"
-          style={{ height: hp(85), width: wp(85) }}
-        >
-          <FitMeBot />
-        </View>
-      )}
     </SafeAreaView>
   );
 }
